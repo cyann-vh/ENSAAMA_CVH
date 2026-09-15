@@ -1,0 +1,29 @@
+<html>
+
+<!-- ICI IL Y A UN MTL !!! -->
+ <!-- POUR DONNER NOM A ENTITY: ID="nom" -->
+
+  <head>
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="obj-tree" src="./3D_models\exp2_obj_lowpoly_tree\Lowpoly_tree_sample.obj"></a-asset-item>
+            <a-asset-item id="mtl-tree" src="./3D_models\exp2_obj_lowpoly_tree\Lowpoly_tree_sample.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-entity 
+        id="arbre"
+        
+            position= "0 0 -3"
+            scale="0.01 0.01 0.01" 
+            obj-model="obj: #obj-tree; mtl: #mtl-tree">
+        ></a-entity>
+
+         <a-sky color="skyblue"></a-sky>
+
+    </a-scene>
+  </body>
+</html>
