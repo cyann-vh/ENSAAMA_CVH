@@ -3,7 +3,7 @@
 
 ### AFRAME
 
-* [labyrinthe] (./labyrinthe.html)
+* [labyrinthe](./aframe_0.html)
 
 
 # Labyrinthe_Cyann_VH
