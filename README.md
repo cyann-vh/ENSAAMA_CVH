@@ -1,9 +1,9 @@
-## DNMADE2
+## CYANN
 
 
 ### AFRAME
 
-* [labyrinthe](./AFRAME/aframe_0.html)
+* [labyrinthe_Cyann](./AFRAME/aframe_0.html)
 
 
 
