@@ -1,0 +1,86 @@
+<html>
+  <head>
+      <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+
+
+
+    
+
+    <a-scene>
+
+      
+      <a-assets>
+        <!-- images textures -->
+        <img id="texmur" src=" ./assets image\pexels-karola-g-6634154.jpg">
+        <img id="texsol" src="./assets image\texture_sol.png">
+        <img id="fond" src="./assets image\jell_correct.png" >
+        
+        <!-- id.modèle 3D- eyeball -->
+        <a-asset-item id="obj-eye" src="./3D_models\eyeball_3d_model\eyeball.obj"></a-asset-item>
+        <a-asset-item id="mtl-eye" src="./3D_models\eyeball_3d_model\eyeball.mtl"></a-asset-item>
+
+        <!-- musique -->
+        <a-asset-item><audio id="ambiance" src="./musique\Masked Ball.mp3" preload="auto"></audio></a-asset-item>
+
+        <!-- <a-mixin id="mur" material="src: #texmur" depth="1" height="3" width="0.5" geometry="primitive: box" ></a-mixin> -->
+
+      </a-assets>
+
+    
+
+        <!-- sol -->
+        <a-plane material="src: #texsol" position="0 0 -4" rotation="-90 0 0" width="4" height="4" scale="4 4 1"></a-plane>
+        
+        <!-- murs intérieurs -->
+        <a-box material="src: #texmur" position="-1 1 0.5" depth="1" height="3" width="0.5" scale="0.125 1 1"></a-box>
+        <a-box material="src: #texmur" position="0 1 0.5" depth="1" height="3" width="0.5" scale="0.125 1 1"></a-box>
+        <a-box material="src: #texmur" position="1 1 1" depth="1" height="3" width="0.5" scale="0.125 1 2"></a-box>
+        <a-box material="src: #texmur" position="0 1 -1" depth="1" height="3" width="0.5" scale="0.125 1 2" rotation="0 90 0"></a-box>
+        <a-box material="src: #texmur" position="-1. 1 -1" depth="1" height="3" width="0.5" scale="0.125 1 2" rotation="0 0.5 0"></a-box>
+        <a-box material="src: #texmur" position="0.5 1 1.5" depth="1" height="3" width="0.5" scale="0.125 1 0.85" rotation="3 90 -0"></a-box>
+
+        <!-- murs extérieurs -->
+        <a-box material="src: #texmur" position="-0.5 1 2" depth="1" height="3" width="0.5" scale="0.125 1 3" rotation="0 90 0"></a-box>d"0 90 0"></a-box>
+        <a-box material="src: #texmur" position="0.5 1 -2" depth="1" height="3" width="0.5" scale="0.125 1 3" rotation="0 90 0"></a-box>
+        <a-box material="src: #texmur" position="2 1 0" depth="1" height="3" width="0.5" scale="0.125 1 4"></a-box>
+        <a-box material="src: #texmur" position="-2 1 0" depth="1" height="3" width="0.5" scale="0.125 1 4"></a-box>
+
+        <!-- fond -->
+        <a-sky src="#fond"></a-sky>
+
+
+
+        <!-- model 3D -->
+        <a-entity 
+        id="eyeball" 
+        position="-1.70 5 -5" scale="0.85 1 0.450" rotation="42.7 -3.5 -176" 
+        obj-model="obj: #obj-eye ; mtl: #mtl-eye"
+        animation__3="dir: alternate; dur: 5000; loop: true; property: position; to: -1.2 5 -3"></a-entity>
+
+        
+        <!-- lumière -->
+        <!-- <a-light type="spot" position=" -1.70 5 -5" color="white" intensity="5"
+            angle="20" penumbra="0.4">
+        </a-light> -->
+
+
+        <!-- musique -->
+        <a-entity sound="src: #ambiance; autoplay: true; loop: true; volume: 0.1"></a-entity>
+
+
+        <!-- camera -->
+        <a-entity camera="active: true" look-controls wasd-controls="acceleration: 10" position="3.5 1.6 4">
+        <a-light type="point" color="white" intensity="2" distance="5" decay="2" position="0 0 -1"></a-light>
+        </a-entity>
+
+
+
+  
+      
+    </a-scene>
+
+  </body>
+
+</html>
